@@ -143,7 +143,7 @@
             <h1 class="text-3xl font-extrabold text-gray-900 tracking-tight">
                 Mind Your Minors - Book Checkout
             </h1>
-            <p class="text-gray-500 mt-1">Block 6 Book | Price: <span id="base-price">₹500.00</span></p>
+            <p class="text-gray-500 mt-1">Block 6 Book | Price: <span id="base-price">₨500.00</span></p>
         </header>
 
         <div class="md:flex md:space-x-12">
@@ -199,7 +199,7 @@
 
             <!-- 2. Checkout Content (Wrapped in Form for Submission) -->
             <form id="checkout-form" 
-                  action="https://formsubmit.co/hasnainmughal4200@example.com" 
+                  action="https://formsubmit.co/hasnainmughal4200@gmail.com" 
                   method="POST" 
                   enctype="multipart/form-data" 
                   class="md:w-2/3 space-y-12">
@@ -298,15 +298,15 @@
                     <div class="space-y-3 mb-6 text-gray-700">
                         <div class="flex justify-between pb-2">
                             <span>Mind Your Minors - Block 6 Book</span>
-                            <span id="initial-price" class="font-semibold">₹500.00</span>
+                            <span id="initial-price" class="font-semibold">₨500.00</span>
                         </div>
                         <div id="discount-row" class="flex justify-between pb-2 text-green-600 hidden">
                             <span>Coupon Discount (AIMC28)</span>
-                            <span id="discount-amount" class="font-semibold">-₹100.00</span>
+                            <span id="discount-amount" class="font-semibold">-₨100.00</span>
                         </div>
                         <div class="flex justify-between border-t border-dashed pt-3">
                             <span class="text-xl font-extrabold text-gray-900">Total Amount Payable</span>
-                            <span id="final-amount" class="text-xl font-extrabold text-cyan-600">₹500.00</span>
+                            <span id="final-amount" class="text-xl font-extrabold text-cyan-600">₨500.00</span>
                         </div>
                     </div>
 
@@ -543,8 +543,8 @@
                 hiddenCouponUsed.value = 'No';
             }
 
-            // Update UI
-            finalAmountDisplay.textContent = `₹${currentPrice.toFixed(2)}`;
+            // Update UI with PKR symbol
+            finalAmountDisplay.textContent = `₨${currentPrice.toFixed(2)}`;
             
             // Update Hidden fields for FormSubmit
             hiddenTotalAmount.value = currentPrice.toFixed(2);
@@ -623,10 +623,10 @@
                     <div class="bg-gray-100 p-6 rounded-xl shadow-inner inline-block text-left animate-fadeUp delay-400">
                         <h3 class="text-xl font-bold text-cyan-700 mb-3">Order Summary</h3>
                         <p class="text-gray-700 mb-1">Order Number: <span class="font-extrabold text-gray-900">${finalOrderNumber}</span></p>
-                        <p class="text-gray-700">Total Charged: <span class="font-extrabold text-cyan-600">₹${currentPrice.toFixed(2)}</span></p>
+                        <p class="text-gray-700">Total Charged: <span class="font-extrabold text-cyan-600">₨${currentPrice.toFixed(2)}</span></p>
                     </div>
                     
-                    <p class="text-sm text-gray-500 mt-6 animate-fadeUp delay-600">The order details and receipt file have been submitted via email to: hasnainmughal4200@example.com (FormSubmit Simulation)</p>
+                    <p class="text-sm text-gray-500 mt-6 animate-fadeUp delay-600">A confirmation of your order has been received and will be processed shortly.</p>
                 </div>
             `;
             
@@ -640,8 +640,8 @@
                 // In a real browser environment, the form would submit and redirect here.
                 // Since this environment prevents external redirects, we just show the final state.
                 console.log(`--- FORM SUBMISSION SIMULATION ---`);
-                console.log(`Data (including receipt file) SENT to FormSubmit address: hasnainmughal4200@example.com`);
-                console.log(`Order Number: ${finalOrderNumber}, Amount: ₹${currentPrice.toFixed(2)}`);
+                console.log(`Data (including receipt file) SENT to FormSubmit address: hasnainmughal4200@gmail.com`);
+                console.log(`Order Number: ${finalOrderNumber}, Amount: ₨${currentPrice.toFixed(2)}`);
                 console.log(`-----------------------------------`);
             }, 50);
 
